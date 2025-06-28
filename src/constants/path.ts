@@ -7,6 +7,17 @@ export const PATH_IMAGE = {
   RACING: "/assets/icons/racing.svg",
   SPORT_RACE: "/assets/icons/sport-race.svg",
   MINI_GAME: "/assets/icons/mini-games.svg",
+  NFT1: "/assets/images/nft1.png",
+  NFT2: "/assets/images/nft2.png",
+  NFT3: "/assets/images/nft3.png",
+  NFT4: "/assets/images/nft4.png",
+  NFT5: "/assets/images/nft5.png",
+  NFT6: "/assets/images/nft6.png",
+  NFT_ClANDER: "/assets/images/nft-calendar.png",
+  NFT_PROMOTION: "/assets/images/nft-promotion.png",
+  NFT_HOT: "/assets/images/nft-hot.png",
+  ARROW_LEFT: "/assets/icons/arrow-left.svg",
+  ARROW_RIGHT: "/assets/icons/arrow-right.svg",
 };
 
 export const PATH_PAGE = {

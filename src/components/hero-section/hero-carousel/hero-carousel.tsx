@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
 import { PATH_IMAGE } from "@/constants";
-import "./swiper-pagination.scss";
+import "./style.scss";
 
 export default function HeroCarousel() {
   const banners = [
