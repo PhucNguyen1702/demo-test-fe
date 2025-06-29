@@ -18,7 +18,7 @@ export default function NewNftCollections() {
   ];
 
   return (
-    <section className="px-[236px] py-[40px]">
+    <section className="px-[236px]">
       <div className="flex flex-row items-center justify-between mb-6 relative">
         <h2 className="text-yellow-400 font-bold italic text-xl leading-none">
           NEW NFT COLLECTIONS

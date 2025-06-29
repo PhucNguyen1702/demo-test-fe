@@ -15,6 +15,7 @@ export const PATH_IMAGE = {
   NFT6: "/assets/images/nft6.png",
   NFT_ClANDER: "/assets/images/nft-calendar.png",
   NFT_PROMOTION: "/assets/images/nft-promotion.png",
+  INSTALL_APP: "/assets/images/install-app.png",
   NFT_HOT: "/assets/images/nft-hot.png",
   ARROW_LEFT: "/assets/icons/arrow-left.svg",
   ARROW_RIGHT: "/assets/icons/arrow-right.svg",

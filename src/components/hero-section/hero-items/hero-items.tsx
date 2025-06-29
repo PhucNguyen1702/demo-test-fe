@@ -19,7 +19,6 @@ export default function HeroItems() {
           key={index}
           className="flex flex-col items-center relative cursor-pointer transition-transform duration-300 hover:scale-105 group"
         >
-          {/* Icon */}
           <div className="relative">
             <Image
               src={item.icon}
@@ -34,7 +33,6 @@ export default function HeroItems() {
               </span>
             )}
           </div>
-          {/* Label */}
           <span className="mt-2 text-xs text-white group-hover:text-yellow-400 transition-colors duration-300">
             {item.label}
           </span>
