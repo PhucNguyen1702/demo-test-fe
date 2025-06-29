@@ -19,6 +19,8 @@ export const PATH_IMAGE = {
   NFT_HOT: "/assets/images/nft-hot.png",
   ARROW_LEFT: "/assets/icons/arrow-left.svg",
   ARROW_RIGHT: "/assets/icons/arrow-right.svg",
+  MENU: "/assets/icons/menu.svg",
+  CLOSED: "/assets/icons/close.svg",
 };
 
 export const PATH_PAGE = {
