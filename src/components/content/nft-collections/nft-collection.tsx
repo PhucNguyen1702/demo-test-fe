@@ -78,18 +78,20 @@ export default function NewNftCollections() {
       >
         {nftItems.map((src, idx) => (
           <SwiperSlide key={idx}>
-            <div className="relative w-full aspect-[3/4] overflow-hidden rounded-xl group transition-all duration-500">
-              {/* Ảnh là thành phần bên trong sẽ dịch lên */}
+            <div
+              className="
+      relative w-full aspect-[3/4] overflow-hidden rounded-xl
+      transition-transform duration-500 ease-in-out
+      hover:-translate-y-3
+      shadow-md hover:shadow-xl
+      group
+    "
+            >
               <Image
                 src={src}
                 alt={`NFT ${idx + 1}`}
-                width={180}
-                height={240}
-                className="
-        w-full h-full object-cover
-        transition-transform duration-500 ease-in-out
-        group-hover:scale-105 group-hover:-translate-y-3
-      "
+                fill
+                className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
               />
 
               <div className="absolute inset-0 rounded-xl ring-0 group-hover:ring-4 group-hover:ring-[#FFC700] transition-all duration-500 pointer-events-none"></div>

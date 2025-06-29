@@ -16,8 +16,7 @@ module.exports = {
     extend: {
       fontFamily: {
         fontFamily: {
-          playfair: ["Playfair Display", "serif"],
-          montserrat: ["Montserrat", "sans-serif"],
+          sans: ["var(--font-roboto)", "sans-serif"],
         },
       },
     },

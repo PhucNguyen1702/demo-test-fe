@@ -6,23 +6,23 @@ const FOOTER_COLUMNS = [
   {
     title: "ABOUT US",
     items: [
-      { label: "Careers", href: "#" },
-      { label: "Company Details", href: "#" },
-      { label: "Terms & Conditions", href: "#" },
-      { label: "Help center", href: "#" },
-      { label: "Privacy Policy", href: "#" },
-      { label: "Affiliate", href: "#" },
+      { label: "Careers", href: "/#" },
+      { label: "Company Details", href: "/#" },
+      { label: "Terms & Conditions", href: "/#" },
+      { label: "Help center", href: "/#" },
+      { label: "Privacy Policy", href: "/#" },
+      { label: "Affiliate", href: "/#" },
     ],
   },
   {
     title: "PRODUCTS",
     items: [
-      { label: "NFT Marketplace", href: "#" },
-      { label: "Slingshot", href: "#" },
-      { label: "Swaps", href: "#" },
-      { label: "NFT Launchpad", href: "#" },
-      { label: "Runes Platform", href: "#" },
-      { label: "Creator Dashboard", href: "#" },
+      { label: "NFT Marketplace", href: "/#" },
+      { label: "Slingshot", href: "/#" },
+      { label: "Swaps", href: "/#" },
+      { label: "NFT Launchpad", href: "/#" },
+      { label: "Runes Platform", href: "/#" },
+      { label: "Creator Dashboard", href: "/#" },
     ],
   },
   {
@@ -48,7 +48,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-1 text-[#E5E5E5]">
               {col.items.map((item) => (
-                <li key={item.label}>
+                <li
+                  key={item.label}
+                  className="transition-colors duration-300 hover:text-[#FFC700]"
+                >
                   <a href={item.href}>{item.label}</a>
                 </li>
               ))}
