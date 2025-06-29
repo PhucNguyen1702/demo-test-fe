@@ -39,8 +39,8 @@ const FOOTER_COLUMNS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#181818] py-10 px-[236px]">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+    <footer className="bg-[#181818] py-10 px-6 md:px-12 xl:px-[236px]">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {FOOTER_COLUMNS.map((col) => (
           <div key={col.title}>
             <h4 className="font-bold italic text-white mb-3 uppercase">
@@ -55,6 +55,7 @@ export default function Footer() {
             </ul>
           </div>
         ))}
+
         <div>
           <h4 className="font-bold italic text-white mb-3 uppercase">
             Contact Us
@@ -70,6 +71,7 @@ export default function Footer() {
                 alt="App Icon"
                 width={28}
                 height={28}
+                className="object-contain"
               />
               <span className="text-white font-semibold">Install App</span>
             </button>

@@ -16,15 +16,15 @@ export default function Header() {
   ];
 
   return (
-    <header className="flex flex-row justify-between items-center py-5 px-10 bg-black">
+    <header className="flex items-center justify-between bg-black px-4 py-4 md:px-10 md:py-5">
       {/* Logo */}
-      <Link href={PATH_PAGE.HOME} className="mr-6">
+      <Link href={PATH_PAGE.HOME} className="flex-shrink-0">
         <Image src={PATH_IMAGE.LOGO} width={72} height={39} alt="Logo" />
       </Link>
 
       {/* Nav */}
-      <nav className="flex-1">
-        <ul className="flex flex-row space-x-4">
+      <nav className="hidden md:flex flex-1 ml-6">
+        <ul className="flex flex-row space-x-2 md:space-x-4">
           {navLinks.map((link, index) => {
             const isActive = pathname === link.href;
 
@@ -32,8 +32,12 @@ export default function Header() {
               <li key={index}>
                 <Link
                   href={link.href}
-                  className={`uppercase px-4 py-2 rounded-full transition-colors 
-                ${isActive ? "bg-[#383A42] text-[#FFC700]" : "text-white hover:bg-[#383A42] hover:text-[#FFC700]"}`}
+                  className={`uppercase px-3 py-2 md:px-4 md:py-2 rounded-full transition-colors 
+                    ${
+                      isActive
+                        ? "bg-[#383A42] text-[#FFC700]"
+                        : "text-white hover:bg-[#383A42] hover:text-[#FFC700]"
+                    }`}
                 >
                   {link.title}
                 </Link>
@@ -42,17 +46,18 @@ export default function Header() {
           })}
         </ul>
       </nav>
+
       {/* Auth buttons */}
-      <div className="flex flex-row items-center justify-end space-x-4">
+      <div className="flex items-center gap-2 md:gap-4">
         <Link
           href={PATH_PAGE.SIGN_UP}
-          className="bg-yellow-400 hover:bg-[#C79B12]  text-black italic font-bold px-6 py-2 rounded-full"
+          className="bg-yellow-400 hover:bg-[#C79B12] text-black italic font-bold px-4 py-1.5 md:px-6 md:py-2 rounded-full"
         >
           SIGN UP
         </Link>
         <Link
           href={PATH_PAGE.LOGIN}
-          className="border border-[#FFC700] hover:border-[#FFE8AB] italic text-white font-bold px-6 py-2 rounded-full"
+          className="border border-[#FFC700] hover:border-[#FFE8AB] italic text-white font-bold px-4 py-1.5 md:px-6 md:py-2 rounded-full"
         >
           LOG IN
         </Link>

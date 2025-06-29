@@ -23,7 +23,7 @@ export default function HeroCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="relative">
+    <div className="relative mx-auto ">
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
@@ -36,7 +36,7 @@ export default function HeroCarousel() {
         speed={2000}
         pagination={{ clickable: true }}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        className="relative w-full h-[450px]"
+        className="relative w-[390px] h-[180px] md:w-full md:h-[450px]"
       >
         {banners.map((src, index) => (
           <SwiperSlide key={index}>
@@ -47,12 +47,7 @@ export default function HeroCarousel() {
                 }`}
                 className="absolute inset-0 w-full h-full kenburns"
               >
-                <Image
-                  src={src}
-                  alt={`Banner ${index + 1}`}
-                  fill
-                  className="object-cover"
-                />
+                <Image src={src} alt={`Banner ${index + 1}`} fill />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>

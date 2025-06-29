@@ -1,1 +1,1 @@
-export { default as NftCollections } from "./nft-collections";
+export { default as NftCollections } from "./nft-collection";

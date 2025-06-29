@@ -17,25 +17,23 @@ export default function HotNftAndPromotion() {
   ];
 
   return (
-    <section className="flex gap-8">
+    <section className="flex flex-wrap gap-6 sm:gap-8">
       {boxes.map((box, idx) => (
-        <div key={idx} className="flex flex-col gap-4">
-          <h2 className="text-yellow-400 mb-4 font-bold italic text-xl leading-none">
+        <div key={idx} className="flex flex-col items-start flex-1 gap-4">
+          <h2 className="text-yellow-400 mb-1 font-bold italic text-xl leading-none">
             {box.title}
           </h2>
 
-          <div className="relative w-[240px] aspect-square rounded-2xl overflow-hidden group shadow-xl transition-all duration-700">
+          <div className="relative w-full aspect-square rounded-2xl overflow-hidden group shadow-xl transition-all duration-700">
             <Image
               src={box.image}
               alt={box.title}
-              width={240}
-              height={240}
-              className="object-cover w-full h-full group-hover:scale-105"
+              fill
+              className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
             />
 
-            <div className="absolute inset-0 rounded-2xl shimmer"></div>
-
-            <div className="absolute inset-0 rounded-2xl ring-2 ring-[#FFC700]/50 animate-pulse"></div>
+            <div className="absolute inset-0 shimmer"></div>
+            <div className="absolute inset-0 ring-2 ring-[#FFC700]/50 animate-pulse"></div>
           </div>
         </div>
       ))}
