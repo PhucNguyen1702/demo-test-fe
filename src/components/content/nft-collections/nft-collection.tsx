@@ -5,16 +5,41 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import { PATH_IMAGE } from "@/constants";
 
 export default function NewNftCollections() {
   const nftItems = [
-    PATH_IMAGE.NFT1,
-    PATH_IMAGE.NFT2,
-    PATH_IMAGE.NFT3,
-    PATH_IMAGE.NFT4,
-    PATH_IMAGE.NFT5,
-    PATH_IMAGE.NFT6,
+    {
+      src: PATH_IMAGE.NFT1,
+      href: "/nft/1",
+      alt: "NFT Collection #1 - Exclusive Drop",
+    },
+    {
+      src: PATH_IMAGE.NFT2,
+      href: "/nft/2",
+      alt: "NFT Collection #2 - Rare Item",
+    },
+    {
+      src: PATH_IMAGE.NFT3,
+      href: "/nft/3",
+      alt: "NFT Collection #3 - Limited Edition",
+    },
+    {
+      src: PATH_IMAGE.NFT4,
+      href: "/nft/4",
+      alt: "NFT Collection #4 - Special Art",
+    },
+    {
+      src: PATH_IMAGE.NFT5,
+      href: "/nft/5",
+      alt: "NFT Collection #5 - Unique Piece",
+    },
+    {
+      src: PATH_IMAGE.NFT6,
+      href: "/nft/6",
+      alt: "NFT Collection #6 - Hot Drop",
+    },
   ];
 
   return (
@@ -22,7 +47,8 @@ export default function NewNftCollections() {
       className="
         w-full max-w-[1600px] min-w-[390px] mx-auto
         px-4 md:px-12 xl:px-[236px]
-        min-h-[245px] md:min-h-[300px]
+        lg:min-h-[245px] md:min-h-[180px] sm:min-h-[180px]
+        mb-4
       "
     >
       <div className="flex flex-row items-center justify-between mb-6 relative">
@@ -35,7 +61,7 @@ export default function NewNftCollections() {
             <div className="rounded-full bg-[#333] flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_15px_#FFC700] group-hover:bg-[#FFC700]/20 transition-all duration-300">
               <Image
                 src={PATH_IMAGE.ARROW_LEFT}
-                alt="Prev"
+                alt="Previous NFT"
                 width={24}
                 height={24}
                 className="object-contain"
@@ -46,7 +72,7 @@ export default function NewNftCollections() {
             <div className="rounded-full bg-[#333] flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_15px_#FFC700] group-hover:bg-[#FFC700]/20 transition-all duration-300">
               <Image
                 src={PATH_IMAGE.ARROW_RIGHT}
-                alt="Next"
+                alt="Next NFT"
                 width={24}
                 height={24}
                 className="object-contain"
@@ -76,27 +102,33 @@ export default function NewNftCollections() {
           1280: { slidesPerView: 5.5, spaceBetween: 20 },
         }}
       >
-        {nftItems.map((src, idx) => (
+        {nftItems.map((item, idx) => (
           <SwiperSlide key={idx}>
-            <div
-              className="
-      relative w-full aspect-[3/4] overflow-hidden rounded-xl
-      transition-transform duration-500 ease-in-out
-      hover:-translate-y-3
-      shadow-md hover:shadow-xl
-      group
-    "
-            >
-              <Image
-                src={src}
-                alt={`NFT ${idx + 1}`}
-                fill
-                className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-              />
+            <div className="relative w-full aspect-[3/4] group rounded-xl overflow-hidden">
+              <Link href={item.href} className="block w-full h-full">
+                <div
+                  className="
+                    relative w-full h-full rounded-xl overflow-hidden
+                    shadow-md hover:shadow-xl
+                    transition-transform duration-500 ease-in-out
+                  "
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="
+                      w-full h-full object-cover rounded-xl
+                      transition-transform duration-500 ease-in-out
+                      group-hover:scale-105
+                    "
+                  />
 
-              <div className="absolute inset-0 rounded-xl ring-0 group-hover:ring-4 group-hover:ring-[#FFC700] transition-all duration-500 pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+                </div>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 rounded-xl ring-0 group-hover:ring-4 group-hover:ring-[#FFC700] transition-all duration-500 pointer-events-none"></div>
+              </Link>
             </div>
           </SwiperSlide>
         ))}

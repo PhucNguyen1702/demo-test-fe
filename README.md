@@ -37,7 +37,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 Screen test in laptop :
 ![img.png](img.png)
+
+
 Screen test in mobile :
 ![img_1.png](img_1.png)
+
 Link deploy:
 https://demo-test-fe-j1zd.vercel.app/home

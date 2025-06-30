@@ -16,8 +16,8 @@ export default function HeroItems() {
     <div
       className="
         flex justify-between items-center
-        bg-[#1F1F1F] py-8 px-4 md:px-12 xl:px-[236px]
-        w-full max-w-[1600px] min-w-[390px] mx-auto
+        bg-[#1F1F1F] py-6 px-4 md:px-12 xl:px-[236px]
+        w-full max-w-[1600px] min-w-[300px] mx-auto
       "
     >
       {MENU_ITEMS.map((item, index) => (
@@ -32,8 +32,8 @@ export default function HeroItems() {
           <div
             className="
               relative
-              w-[clamp(40px,5vw,72px)]
-              h-[clamp(40px,5vw,72px)]
+              w-[clamp(32px,8vw,64px)]
+              h-[clamp(32px,8vw,64px)]
             "
           >
             <Image
@@ -43,12 +43,22 @@ export default function HeroItems() {
               className="object-contain"
             />
             {item.isNew && (
-              <span className="absolute -top-2 -right-3 bg-red-600 text-white text-xs px-1 rounded transition-transform transition-shadow duration-300 group-hover:scale-110 group-hover:shadow-md">
+              <span className="absolute -top-2 -right-3 bg-red-600 text-white text-[10px] md:text-xs px-1 rounded">
                 NEW
               </span>
             )}
           </div>
-          <span className="mt-2 text-xs md:text-sm xl:text-base text-center text-white group-hover:text-yellow-400 transition-colors duration-300">
+          <span
+            className="
+  mt-1
+  text-[10px] sm:text-xs md:text-sm xl:text-base
+  text-center text-white
+  group-hover:text-yellow-400
+  transition-colors duration-300
+  break-words
+  max-w-[80px] sm:max-w-[90px] md:max-w-[100px] xl:max-w-[120px]
+"
+          >
             {item.label}
           </span>
         </div>

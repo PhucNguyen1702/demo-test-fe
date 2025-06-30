@@ -13,11 +13,7 @@ export default function HeroSection() {
       <div className="block sm:hidden">
         <NavbarMobile />
       </div>
-
-      <div className="w-full">
-        <HeroCarousel />
-      </div>
-
+      <HeroCarousel />
       <div className="w-full">
         <HeroItems />
       </div>

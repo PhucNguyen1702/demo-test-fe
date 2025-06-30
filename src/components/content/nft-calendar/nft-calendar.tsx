@@ -64,12 +64,12 @@ export default function NftDropsCalendar() {
       >
         {banners.map((src, idx) => (
           <SwiperSlide key={idx} className="rounded-2xl overflow-hidden group">
-            <div className="relative w-full h-[180px] md:h-[228px] rounded-2xl overflow-hidden">
+            <div className="relative w-full aspect-[12/5.6] rounded-2xl overflow-hidden">
               <Image
                 src={src}
                 alt={`NFT Drop ${idx + 1}`}
                 fill
-                className="object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-105"
+                className="object-fill rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-105"
               />
               <div className="absolute inset-0 ring-0 group-hover:ring-4 group-hover:ring-[#FFC700] transition-all duration-500 rounded-2xl"></div>
             </div>
